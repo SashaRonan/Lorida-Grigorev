@@ -1,0 +1,301 @@
+$main-color: #004C93;
+$font-h: 'Inter', sans-serif;
+$font-p: 'Roboto', sans-serif;
+
+* {
+    padding: 0px;
+    margin: 0px;
+
+}
+
+.container {
+    width: 1110px;
+    margin: 0 auto;
+}
+
+.link-mp {
+    text-decoration: none;
+
+    &__li {
+        &_style {
+            color: #FFFFFF;
+        }
+
+        &_style:hover {
+            text-decoration: underline;
+            font-weight: 700;
+        }
+    }
+}
+
+.input-mp {
+
+    &__calc {
+        width: 550px;
+        height: 32px;
+        border: 1px solid #000000;
+        outline: none;
+        padding-left: 5px;
+    }
+
+    &__calc-select {
+        width: 555px;
+        appearance: none;
+        // background-image: url("../img/arrow_select.svg");
+        // background-repeat: no-repeat;
+        // background-color: #fff;
+    }
+}
+
+.button {
+    background-color: $main-color;
+
+    &__calc {
+        margin-top: 39px;
+        padding: 14px 47px;
+        border-radius: 5px;
+        border: none;
+
+        &_style {
+            font-family: $font-p;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0em;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.header {
+    height: 100px;
+    background-color: $main-color;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    &-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__h {
+        display: block;
+        justify-content: start;
+
+        &_style {
+            font-family: $font-h;
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+        }
+    }
+
+    &__nav {
+        width: 63%;
+        display: flex;
+        list-style-type: none;
+        justify-content: space-between;
+
+        &_style {
+            font-family: $font-h;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+        }
+    }
+}
+
+.about {
+    margin-top: -150px;
+    padding-top: 300px;
+    display: flex;
+    justify-content: space-between;
+
+    &-box {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        height: 250px;
+        justify-content: space-between;
+        margin-top: 50px;
+
+        &__h {
+            &_style {
+                font-family: $font-h;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 44px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: $main-color;
+            }
+        }
+
+        &__p {
+            &_style {
+                font-family: $font-h;
+                font-size: 24px;
+                font-style: italic;
+                font-weight: 700;
+                line-height: 29px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: $main-color;
+
+            }
+        }
+    }
+}
+
+.activity {
+    margin-top: -58px;
+    padding-top: 116px;
+    background-color: #F3FBFF;
+    min-height: 541px;
+    display: flex;
+    flex-direction: column;
+
+    &__h {
+        display: block;
+        padding: 26px 0 26px 0;
+
+        &_style {
+            font-family: $font-h;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 44px;
+            letter-spacing: 0em;
+            color: $main-color;
+        }
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        margin-bottom: 37px;
+    }
+
+    &-item {
+        border: 1px solid $main-color;
+        width: 200px;
+        height: 289px;
+        border-radius: 4px;
+
+        &_align {
+            align-self: flex-end;
+        }
+
+        &__h {
+            margin: 10px 25px -6px 12px;
+            padding: 0;
+
+            &_style {
+                font-family: $font-p;
+                font-size: 120px;
+                font-weight: 900;
+                letter-spacing: 0em;
+                color: $main-color;
+            }
+        }
+
+        &__p {
+
+            margin: 0 25px 15px 12px;
+
+            &_style {
+                font-family: $font-p;
+
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: $main-color;
+            }
+        }
+    }
+}
+
+.calc {
+    margin-top: -100px;
+    padding-top: 127px;
+
+    &__h {
+
+        &_style {
+            font-family: $font-h;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 44px;
+            letter-spacing: 0em;
+            color: $main-color;
+        }
+    }
+
+    &__input {
+        margin-top: 29px;
+    }
+
+    &__label {
+
+        &_style {
+            font-family: $font-p;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0em;
+
+        }
+    }
+}
+
+.problems {
+
+    &__h {
+
+        &_style {
+            margin: -5px 72px 10px;
+        }
+    }
+}
+
+.mood {
+    margin-top: 53px;
+
+    &_h {
+        font-family: $font-h;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: 0em;
+        color: $main-color;
+    }
+
+    &_img {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+
+}
+
+.footer {
+    margin-top: 73px;
+    position: static;
+
+    &__nav {
+        justify-content: end;
+    }
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/my-page_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Roboto:wght@400;900&display=swap"
+        rel="stylesheet">
+
+        <link rel="shortcut icon" href="img/hand.png">
+
+    <title>Моя страница</title>
+</head>
+
+<body>
+
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header-box container">
+            <a href="index.html" class="link-mp">
+                <p href="index.html" class="header__h header__h_style">Александр Григорьев</p>
+            </a>
+            <nav class="header__nav header__nav_style">
+                <a href="#about-mp" class="link-mp link-mp__li_style">
+                    Обо мне
+                </a>
+                <a href="#activity-mp" class="link-mp link-mp__li_style">
+                    Моя деятельность
+                </a>
+                <a href="#calc-mp" class="link-mp link-mp__li_style">
+                    Калькулятор
+                </a>
+                <a href="#difficulty-mp" class="link-mp link-mp__li_style">
+                    Сложности
+                </a>
+                <a href="#mood-mp" class="link-mp link-mp__li_style">
+                    Настроение
+                </a>
+                <a href="#cont-mp" class="link-mp link-mp__li_style">
+                    Контакты
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Обо мне -->
+    <section  id="about-mp" class="about container">
+
+        <div class="about-box">
+            <h2  class="about-box__h about-box__h_style" >Меня зовут Александр!</h2>
+            <p class="about-box__p about-box__p_style">И я хочу обучиться программированию, потому что мне это жутко!</p>
+            <p class="about-box__p about-box__p_style">А еще я люблю музыку и кушать пельмени.</p>
+        </div>
+
+        <div class="about_img"><img src="img/about_img.jpg" alt=""></div>
+
+    </section>
+
+    <!-- Деятельность -->
+    <section id="activity-mp" class="activity container">
+        <h2  class="activity__h activity__h_style" >Моя деятельность</h2>
+        <div class="activity__box">
+
+            <div class="activity-item">
+                <h3 class="activity-item__h activity-item__h_style">1</h3>
+                <p class="activity-item__p activity-item__p_style">Работаю в сфере разработки и производства различной
+                    продукции</p>
+            </div>
+
+            <div class="activity-item activity-item_align">
+                <h3 class="activity-item__h activity-item__h_style">2</h3>
+                <p class="activity-item__p activity-item__p_style">Учу английский</p>
+            </div>
+
+            <div class="activity-item">
+                <h3 class="activity-item__h activity-item__h_style">3</h3>
+                <p class="activity-item__p activity-item__p_style">Прохожу курс по разработке программного обеспечения
+                </p>
+            </div>
+
+            <div class="activity-item activity-item_align">
+                <h3 class="activity-item__h activity-item__h_style">4</h3>
+                <p class="activity-item__p activity-item__p_style">Учусь собирать кубик Рубика</p>
+            </div>
+
+            <div class="activity-item">
+                <h3 class="activity-item__h activity-item__h_style">5</h3>
+                <p class="activity-item__p activity-item__p_style">Играю в волейбол</p>
+            </div>
+    
+        </div>
+    </section>
+
+    <!-- Калькулятор -->
+    <form id="calc-mp" action="" class="calc container">
+        
+        <h2  class="calc__h calc__h_style">Калькулятор</h2>
+        <p class="calc_input">
+            <label for="calc_x" class="calc__label calc__label_style" >Введите первое число:</label><br>
+            <input type="number" name="calc_x" class="input-mp input-mp__calc">
+        </p>
+        <p class="calc__input">
+            <label for="calc_action" class="calc__label calc__label_style" >Выберите операцию:</label><br>
+            <select name="calc_action" id="calc_action" class="input-mp input-mp__calc input-mp__calc-select">
+                
+                <!-- Не получилось заменить стрелочку на такой же, как в макете -->
+                <option value="sum">+</option>
+                <option value="diff">-</option>
+                <option value="multi">*</option>
+                <option value="division">/</option>
+            </select>
+            
+        </p>
+        <p class="calc__input">
+            <label for="calc_y" class="calc__label calc__label_style" >Введите второе число:</label><br>
+            <input type="number" name="calc_y" class="input-mp input-mp__calc">
+        </p>
+
+        <button class="button button__calc button__calc_style">Вычислить</button>
+    </form>
+
+    <!-- Сложности -->
+    <section id="difficulty-mp" class="activity container">
+        <h2  class="activity__h activity__h_style">Сложности</h2>
+        <div class="activity__box">
+
+            <div class="activity-item">
+                <h3 class="activity-item__h activity-item__h_style problems__h_style">?</h3>
+                <p class="activity-item__p activity-item__p_style">Не получилось задать контур тексту в имени, как в макете</p>
+            </div>
+            <div class="activity-item activity-item_align">
+                <h3 class="activity-item__h activity-item__h_style problems__h_style">?</h3>
+                <p class="activity-item__p activity-item__p_style">В секции "Калькулятор" нет поля для вывода результата</p>
+            </div>
+
+            <div class="activity-item">
+                <h3 class="activity-item__h activity-item__h_style problems__h_style">?</h3>
+                <p class="activity-item__p activity-item__p_style">Не разобрался с заменой стрелочки в теге "select", скачет при масштабировании</p>
+            </div>
+
+            <div class="activity-item activity-item_align">
+                <h3 class="activity-item__h activity-item__h_style problems__h_style">?</h3>
+                <p class="activity-item__p activity-item__p_style">Хочется сделать реверс цветов кнопки "Вычислить" при наведении</p>
+            </div>
+
+            <div class="activity-item">
+                <h3 class="activity-item__h activity-item__h_style problems__h_style">?</h3>
+                <p class="activity-item__p activity-item__p_style">Местами некорректно заданы марджины и паддинги, пришлось придумывать</p>
+            </div>
+
+        </div>
+    </section>
+
+<!-- Настроение -->
+    <section class="mood container">
+        <h2 id="mood-mp" class="mood_h">Настроение</h2>
+        <div class="mood_img"><img src="img/mood_2_img.jpg" alt="#"></div>
+    </section>
+
+    <!-- Подвал --> 
+  <footer class="header footer">
+    <div class="header-box container">
+            <a href="index.html" class="link-mp">
+                <p href="index.html" class="header__h header__h_style">Александр Григорьев</p>
+            </a>
+            <nav id="cont-mp" class="header__nav header__nav_style footer__nav">
+                <a href="https://vk.com/sasharonan" class="link-mp link-mp__li_style">
+                    <img src="img/vk.svg" alt="#">
+                </a>
+            </nav>
+        </div>
+  </footer>
+
+
+</body>
+
+</html>

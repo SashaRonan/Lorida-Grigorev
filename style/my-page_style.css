@@ -1,0 +1,240 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+
+.link-mp {
+  text-decoration: none;
+}
+.link-mp__li_style {
+  color: #FFFFFF;
+}
+.link-mp__li_style:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.input-mp__calc {
+  width: 550px;
+  height: 32px;
+  border: 1px solid #000000;
+  outline: none;
+  padding-left: 5px;
+}
+.input-mp__calc-select {
+  width: 555px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.button {
+  background-color: #004C93;
+}
+.button__calc {
+  margin-top: 39px;
+  padding: 14px 47px;
+  border-radius: 5px;
+  border: none;
+}
+.button__calc_style {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  color: #FFFFFF;
+}
+
+.header {
+  height: 100px;
+  background-color: #004C93;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+.header-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__h {
+  display: block;
+  justify-content: start;
+}
+.header__h_style {
+  font-family: "Inter", sans-serif;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+}
+.header__nav {
+  width: 63%;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+}
+.header__nav_style {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+}
+
+.about {
+  margin-top: -150px;
+  padding-top: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.about-box {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 250px;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.about-box__h_style {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #004C93;
+}
+.about-box__p_style {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #004C93;
+}
+
+.activity {
+  margin-top: -58px;
+  padding-top: 116px;
+  background-color: #F3FBFF;
+  min-height: 541px;
+  display: flex;
+  flex-direction: column;
+}
+.activity__h {
+  display: block;
+  padding: 26px 0 26px 0;
+}
+.activity__h_style {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  color: #004C93;
+}
+.activity__box {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-bottom: 37px;
+}
+.activity-item {
+  border: 1px solid #004C93;
+  width: 200px;
+  height: 289px;
+  border-radius: 4px;
+}
+.activity-item_align {
+  align-self: flex-end;
+}
+.activity-item__h {
+  margin: 10px 25px -6px 12px;
+  padding: 0;
+}
+.activity-item__h_style {
+  font-family: "Roboto", sans-serif;
+  font-size: 120px;
+  font-weight: 900;
+  letter-spacing: 0em;
+  color: #004C93;
+}
+.activity-item__p {
+  margin: 0 25px 15px 12px;
+}
+.activity-item__p_style {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #004C93;
+}
+
+.calc {
+  margin-top: -100px;
+  padding-top: 127px;
+}
+.calc__h_style {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  color: #004C93;
+}
+.calc__input {
+  margin-top: 29px;
+}
+.calc__label_style {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+}
+
+.problems__h_style {
+  margin: -5px 72px 10px;
+}
+
+.mood {
+  margin-top: 53px;
+}
+.mood_h {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: 0em;
+  color: #004C93;
+}
+.mood_img {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.footer {
+  margin-top: 73px;
+  position: static;
+}
+.footer__nav {
+  justify-content: end;
+}/*# sourceMappingURL=my-page_style.css.map */
