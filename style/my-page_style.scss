@@ -1,15 +1,16 @@
 $main-color: #004C93;
 $font-h: 'Inter', sans-serif;
 $font-p: 'Roboto', sans-serif;
+$container: 1110px;
+$container-mobile: 565px;
 
 * {
     padding: 0px;
     margin: 0px;
-
 }
 
 .container {
-    width: 1110px;
+    max-width: $container;
     margin: 0 auto;
 }
 
@@ -68,7 +69,8 @@ $font-p: 'Roboto', sans-serif;
 }
 
 .header {
-    height: 100px;
+
+    min-height: 100px;
     background-color: $main-color;
     display: flex;
     align-items: center;
@@ -78,8 +80,9 @@ $font-p: 'Roboto', sans-serif;
 
     &-box {
         display: flex;
-        align-items: center;
+        align-items: start;
         justify-content: space-between;
+        width: 100%;
     }
 
     &__h {
@@ -103,6 +106,7 @@ $font-p: 'Roboto', sans-serif;
         display: flex;
         list-style-type: none;
         justify-content: space-between;
+        align-self: center;
 
         &_style {
             font-family: $font-h;
@@ -110,6 +114,33 @@ $font-p: 'Roboto', sans-serif;
             font-weight: 400;
             line-height: 19px;
             letter-spacing: 0em;
+        }
+    }
+
+    &__burger {
+        display: none;
+
+        &-sum {
+            list-style: none;
+        }
+
+        &sum::-wedkit-details-marker {
+            display: none;
+        }
+
+        &-sum::after {
+            content: "";
+            display: inline-block;
+            background: url('../img/burger.svg');
+            width: 38px;
+            height: 38px;
+            background-size: 38px 38px;
+        }
+
+        &-img {
+            display: block;
+            height: 60px;
+            width: 38px;
         }
     }
 }
@@ -123,12 +154,12 @@ $font-p: 'Roboto', sans-serif;
     &-box {
         display: flex;
         flex-direction: column;
-        width: 45%;
-        height: 250px;
-        justify-content: space-between;
+        max-width: 45%;
+        min-height: 250px;
         margin-top: 50px;
 
         &__h {
+
             &_style {
                 font-family: $font-h;
                 font-size: 36px;
@@ -137,10 +168,13 @@ $font-p: 'Roboto', sans-serif;
                 letter-spacing: 0em;
                 text-align: left;
                 color: $main-color;
+
             }
         }
 
         &__p {
+            padding-top: 45px;
+
             &_style {
                 font-family: $font-h;
                 font-size: 24px;
@@ -160,9 +194,11 @@ $font-p: 'Roboto', sans-serif;
     margin-top: -58px;
     padding-top: 116px;
     background-color: #F3FBFF;
+    background-clip:content-box;
     min-height: 541px;
     display: flex;
     flex-direction: column;
+    max-width: $container;
 
     &__h {
         display: block;
@@ -209,12 +245,10 @@ $font-p: 'Roboto', sans-serif;
         }
 
         &__p {
-
             margin: 0 25px 15px 12px;
 
             &_style {
                 font-family: $font-p;
-
                 font-size: 16px;
                 font-weight: 400;
                 line-height: 26px;
@@ -260,11 +294,71 @@ $font-p: 'Roboto', sans-serif;
 }
 
 .problems {
+    margin-top: -58px;
+    padding-top: 116px;
+    background-color: #F3FBFF;
+    background-clip:content-box;
+    min-height: 541px;
+    display: flex;
+    flex-direction: column;
+    max-width: $container;
 
     &__h {
+        display: block;
+        padding: 26px 0 26px 0;
 
         &_style {
+            font-family: $font-h;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 44px;
+            letter-spacing: 0em;
+            color: $main-color;
+        }
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        margin-bottom: 37px;
+    }
+
+    &-item {
+        border: 1px solid $main-color;
+        width: 200px;
+        height: 289px;
+        border-radius: 4px;
+
+        &_align {
+            align-self: flex-end;
+        }
+
+        &__h {
             margin: -5px 72px 10px;
+            padding: 0;
+
+            &_style {
+                font-family: $font-p;
+                font-size: 120px;
+                font-weight: 900;
+                letter-spacing: 0em;
+                color: $main-color;
+            }
+        }
+
+        &__p {
+            margin: 0 25px 15px 12px;
+
+            &_style {
+                font-family: $font-p;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 26px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: $main-color;
+            }
         }
     }
 }
@@ -281,21 +375,188 @@ $font-p: 'Roboto', sans-serif;
         color: $main-color;
     }
 
-    &_img {
+    &_box {
         display: flex;
         justify-content: center;
         margin-top: 10px;
         width: 100%;
     }
-
-
 }
 
 .footer {
+    min-height: 100px;
+    background-color: $main-color;
+    display: flex;
+    align-items: center;
+    width: 100%;
     margin-top: 73px;
-    position: static;
+
+    &-box {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__h {
+        display: block;
+        justify-content: start;
+
+        &_style {
+            font-family: $font-h;
+            color: #FFFFFF;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 29px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FFFFFF;
+        }
+    }
 
     &__nav {
+        // width: 63%;
+        display: flex;
+        list-style-type: none;
         justify-content: end;
+        align-self: center;
+
+        &_style {
+            font-family: $font-h;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .container {
+        max-width: $container-mobile;
+    }
+
+    .header {
+
+        height: min-content;
+        align-items: start;
+
+        &__nav {
+            display: none;
+        }
+
+        &-box {
+            margin-top: 31px;
+        }
+
+        &__burger {
+            display: block;
+
+            &-sum {
+                display: flex;
+                justify-content: end;
+            }
+
+            &-details {
+                display: flex;
+                list-style-type: none;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: end;
+                height: 278px;
+                margin: 66px 0 25px 0;
+
+            }
+        }
+    }
+
+    .about {
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-box {
+            max-width: 100%;
+            margin-top: 0;
+        }
+
+        &_img {
+            margin-top: 50px;
+        }
+    }
+
+    .activity {
+        padding-top: 110;
+        margin-top: -55px;
+
+        &__box {
+            flex-direction: column;
+        }
+
+        &__h {
+            padding-bottom: 7px;
+        }
+
+        &-item {
+            width: $container-mobile;
+            height: 200px;
+            display: flex;
+            margin-top: 19px;
+
+            &_align {
+                align-self: normal;
+            }
+
+            &__h {
+                margin-left: 34px;
+                margin-right: 3px;
+            }
+
+            &__p {
+                padding-top: 31px;
+            }
+        }
+    }
+
+    .problems {
+        padding-top: 85px;
+        margin-top: 66px;
+
+        &__box {
+            flex-direction: column;
+        }
+
+        &__h {
+            padding-bottom: 7px;
+        }
+
+        &-item {
+            width: $container-mobile;
+            height: 125px;
+            display: flex;
+            margin-top: 19px;
+
+            &_align {
+                align-self: normal;
+            }
+
+            &__h {
+                margin-left: 34px;
+                margin-right: 3px;
+            }
+
+            &__p {
+                padding-top: 31px;
+            }
+        }
+    }
+
+    .mood {
+        margin-top: 66px;
+
+        &_img {
+            width: 390px;
+            height: 369px;
+        }
     }
 }
