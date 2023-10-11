@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Roboto:wght@400;900&display=swap"
         rel="stylesheet">
 
-        <link rel="shortcut icon" href="img/hand.png">
+    <link rel="shortcut icon" href="img/hand.png">
 
     <title>Моя страница</title>
 </head>
@@ -74,11 +74,12 @@
     </header>
 
     <!-- Обо мне -->
-    <section  id="about-mp" class="about container">
+    <section id="about-mp" class="about container">
 
         <div class="about-box">
-            <h2  class="about-box__h about-box__h_style" >Меня зовут Александр!</h2>
-            <p class="about-box__p about-box__p_style">И я хочу обучиться программированию, потому что мне это жутко!</p>
+            <h2 class="about-box__h about-box__h_style">Меня зовут Александр!</h2>
+            <p class="about-box__p about-box__p_style">И я хочу обучиться программированию, потому что мне это интересно!
+            </p>
             <p class="about-box__p about-box__p_style">А еще я люблю музыку и кушать пельмени.</p>
         </div>
 
@@ -87,62 +88,70 @@
     </section>
 
     <!-- Деятельность -->
-    <section id="activity-mp" class="activity container">
-        <h2  class="activity__h activity__h_style" >Моя деятельность</h2>
-        <div class="activity__box">
+    <section id="activity-mp" class="activity">
 
-            <div class="activity-item">
-                <h3 class="activity-item__h activity-item__h_style">1</h3>
-                <p class="activity-item__p activity-item__p_style">Работаю в сфере разработки и производства различной
-                    продукции</p>
+        <div class="activity__block container">
+
+            <h2 class="activity__h activity__h_style">Моя деятельность</h2>
+
+            <div class="activity__box">
+
+                <div class="activity-item">
+                    <h3 class="activity-item__h activity-item__h_style">1</h3>
+                    <p class="activity-item__p activity-item__p_style">Работаю в сфере разработки и производства
+                        различной
+                        продукции</p>
+                </div>
+
+                <div class="activity-item activity-item_align">
+                    <h3 class="activity-item__h activity-item__h_style">2</h3>
+                    <p class="activity-item__p activity-item__p_style">Учу английский</p>
+                </div>
+
+                <div class="activity-item">
+                    <h3 class="activity-item__h activity-item__h_style">3</h3>
+                    <p class="activity-item__p activity-item__p_style">Прохожу курс по разработке программного
+                        обеспечения
+                    </p>
+                </div>
+
+                <div class="activity-item activity-item_align">
+                    <h3 class="activity-item__h activity-item__h_style">4</h3>
+                    <p class="activity-item__p activity-item__p_style">Учусь собирать кубик Рубика</p>
+                </div>
+
+                <div class="activity-item">
+                    <h3 class="activity-item__h activity-item__h_style">5</h3>
+                    <p class="activity-item__p activity-item__p_style">Играю в волейбол</p>
+                </div>
+
             </div>
 
-            <div class="activity-item activity-item_align">
-                <h3 class="activity-item__h activity-item__h_style">2</h3>
-                <p class="activity-item__p activity-item__p_style">Учу английский</p>
-            </div>
-
-            <div class="activity-item">
-                <h3 class="activity-item__h activity-item__h_style">3</h3>
-                <p class="activity-item__p activity-item__p_style">Прохожу курс по разработке программного обеспечения
-                </p>
-            </div>
-
-            <div class="activity-item activity-item_align">
-                <h3 class="activity-item__h activity-item__h_style">4</h3>
-                <p class="activity-item__p activity-item__p_style">Учусь собирать кубик Рубика</p>
-            </div>
-
-            <div class="activity-item">
-                <h3 class="activity-item__h activity-item__h_style">5</h3>
-                <p class="activity-item__p activity-item__p_style">Играю в волейбол</p>
-            </div>
-    
         </div>
     </section>
 
     <!-- Калькулятор -->
     <form id="calc-mp" action="" class="calc container">
-        
-        <h2  class="calc__h calc__h_style">Калькулятор</h2>
+
+        <h2 class="calc__h calc__h_style">Калькулятор</h2>
         <p class="calc_input">
-            <label for="calc_x" class="calc__label calc__label_style" >Введите первое число:</label><br>
+            <label for="calc_x" class="calc__label calc__label_style">Введите первое число:</label><br>
             <input type="number" name="calc_x" class="input-mp input-mp__calc">
         </p>
         <p class="calc__input">
-            <label for="calc_action" class="calc__label calc__label_style" >Выберите операцию:</label><br>
+            <label for="calc_action" class="calc__label calc__label_style">Выберите операцию:</label><br>
             <select name="calc_action" id="calc_action" class="input-mp input-mp__calc input-mp__calc-select">
-                
+
                 <!-- Не получилось заменить стрелочку на такой же, как в макете -->
                 <option value="sum">+</option>
                 <option value="diff">-</option>
                 <option value="multi">*</option>
                 <option value="division">/</option>
             </select>
-            
+
         </p>
         <p class="calc__input">
-            <label for="calc_y" class="calc__label calc__label_style" >Введите второе число:</label><br>
+            <label for="calc_y" class="calc__label calc__label_style">Введите второе число:</label><br>
             <input type="number" name="calc_y" class="input-mp input-mp__calc">
         </p>
 
@@ -150,46 +159,59 @@
     </form>
 
     <!-- Сложности -->
-    <section id="problems-mp" class="problems container">
-        <h2  class="problems__h problems__h_style">Сложности</h2>
-        <div class="problems__box">
+    <section id="problems-mp" class="problems">
 
-            <div class="problems-item">
-                <h3 class="problems-item__h problems-item__h_style">?</h3>
-                <p class="problems-item__p problems-item__p_style">Не получилось задать контур тексту в имени, как в макете</p>
-            </div>
-            <div class="problems-item problems-item_align">
-                <h3 class="problems-item__h problems-item__h_style">?</h3>
-                <p class="problems-item__p problems-item__p_style">В секции "Калькулятор" нет поля для вывода результата</p>
-            </div>
+        <div class="problems__block container">
 
-            <div class="problems-item">
-                <h3 class="problems-item__h problems-item__h_style">?</h3>
-                <p class="problems-item__p problems-item__p_style">Не разобрался с заменой стрелочки в теге "select", скачет при масштабировании</p>
-            </div>
+            <h2 class="problems__h problems__h_style">Сложности</h2>
+            <div class="problems__box">
 
-            <div class="problems-item problems-item_align">
-                <h3 class="problems-item__h problems-item__h_style">?</h3>
-                <p class="problems-item__p problems-item__p_style">Хочется сделать реверс цветов кнопки "Вычислить" при наведении</p>
-            </div>
+                <div class="problems-item">
+                    <h3 class="problems-item__h problems-item__h_style">?</h3>
+                    <p class="problems-item__p problems-item__p_style">Не получилось задать контур тексту в имени, как в
+                        макете</p>
+                </div>
+                <div class="problems-item problems-item_align">
+                    <h3 class="problems-item__h problems-item__h_style">?</h3>
+                    <p class="problems-item__p problems-item__p_style">В секции "Калькулятор" нет поля для вывода
+                        результата
+                    </p>
+                </div>
 
-            <div class="problems-item">
-                <h3 class="problems-item__h problems-item__h_style">?</h3>
-                <p class="problems-item__p problems-item__p_style">Местами некорректно заданы марджины и паддинги, пришлось придумывать</p>
+                <div class="problems-item">
+                    <h3 class="problems-item__h problems-item__h_style">?</h3>
+                    <p class="problems-item__p problems-item__p_style">Не разобрался с заменой стрелочки в теге
+                        "select",
+                        скачет при масштабировании</p>
+                </div>
+
+                <div class="problems-item problems-item_align">
+                    <h3 class="problems-item__h problems-item__h_style">?</h3>
+                    <p class="problems-item__p problems-item__p_style">Хочется сделать реверс цветов кнопки "Вычислить"
+                        при
+                        наведении</p>
+                </div>
+
+                <div class="problems-item">
+                    <h3 class="problems-item__h problems-item__h_style">?</h3>
+                    <p class="problems-item__p problems-item__p_style">Местами некорректно заданы марджины и паддинги,
+                        пришлось придумывать</p>
+                </div>
+
             </div>
 
         </div>
     </section>
 
-<!-- Настроение -->
+    <!-- Настроение -->
     <section class="mood container">
         <h2 id="mood-mp" class="mood_h">Настроение</h2>
         <div class="mood_box"><img class="mood_img" src="img/mood_2_img.jpg" alt="#"></div>
     </section>
 
-    <!-- Подвал --> 
-  <footer class="footer">
-    <div class="footer-box container">
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="footer-box container">
             <a href="index.html" class="link-mp">
                 <p href="index.html" class="footer__h footer__h_style">Александр Григорьев</p>
             </a>
@@ -199,7 +221,7 @@
                 </a>
             </nav>
         </div>
-  </footer>
+    </footer>
 
 
 </body>

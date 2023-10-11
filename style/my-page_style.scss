@@ -41,7 +41,7 @@ $container-mobile: 565px;
 
     &__calc-select {
         width: 555px;
-        appearance: none;
+        // appearance: none;
         // background-image: url("../img/arrow_select.svg");
         // background-repeat: no-repeat;
         // background-color: #fff;
@@ -195,10 +195,13 @@ $container-mobile: 565px;
     padding-top: 116px;
     background-color: #F3FBFF;
     background-clip:content-box;
-    min-height: 541px;
+
+    &__block {
+     min-height: 541px;
     display: flex;
     flex-direction: column;
     max-width: $container;
+    }
 
     &__h {
         display: block;
@@ -298,10 +301,14 @@ $container-mobile: 565px;
     padding-top: 116px;
     background-color: #F3FBFF;
     background-clip:content-box;
+    
+
+&__block {
     min-height: 541px;
     display: flex;
     flex-direction: column;
     max-width: $container;
+}
 
     &__h {
         display: block;
