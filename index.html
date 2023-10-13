@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="style/my-page_style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Roboto:wght@400;900&display=swap"
-        rel="stylesheet">
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+<!--    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Roboto:wght@400;900&display=swap"-->
+<!--        rel="stylesheet">-->
 
     <link rel="shortcut icon" href="img/hand.png">
 
@@ -22,7 +22,7 @@
     <header class="header">
         <div class="header-box container">
             <a href="index.html" class="link-mp">
-                <p href="index.html" class="header__h header__h_style">Александр Григорьев</p>
+                <p class="header__h header__h_style">Александр Григорьев</p>
             </a>
 
             <details class="header__burger">
@@ -30,10 +30,10 @@
                 </summary>
                 <nav class="header__nav_style header__burger-details">
                     <a href="#about-mp" class="link-mp link-mp__li_style">
-                        Обо мне
+                        Обо&nbsp;мне
                     </a>
                     <a href="#activity-mp" class="link-mp link-mp__li_style">
-                        Моя деятельность
+                        Моя&nbsp;деятельность
                     </a>
                     <a href="#calc-mp" class="link-mp link-mp__li_style">
                         Калькулятор
@@ -51,22 +51,22 @@
             </details>
 
             <nav class="header__nav header__nav_style">
-                <a href="#about-mp" class="link-mp link-mp__li_style">
-                    Обо мне
+                <a href="#about-mp" class="link-mp link-mp__li_style header__nav_a">
+                    Обо&nbsp;мне
                 </a>
-                <a href="#activity-mp" class="link-mp link-mp__li_style">
-                    Моя деятельность
+                <a href="#activity-mp" class="link-mp link-mp__li_style header__nav_a">
+                    Моя&nbsp;деятельность
                 </a>
-                <a href="#calc-mp" class="link-mp link-mp__li_style">
+                <a href="#calc-mp" class="link-mp link-mp__li_style header__nav_a">
                     Калькулятор
                 </a>
-                <a href="#problems-mp" class="link-mp link-mp__li_style">
+                <a href="#problems-mp" class="link-mp link-mp__li_style header__nav_a">
                     Сложности
                 </a>
-                <a href="#mood-mp" class="link-mp link-mp__li_style">
+                <a href="#mood-mp" class="link-mp link-mp__li_style header__nav_a">
                     Настроение
                 </a>
-                <a href="#cont-mp" class="link-mp link-mp__li_style">
+                <a href="#cont-mp" class="link-mp link-mp__li_style header__nav_a">
                     Контакты
                 </a>
             </nav>
@@ -77,13 +77,15 @@
     <section id="about-mp" class="about container">
 
         <div class="about-box">
-            <h2 class="about-box__h about-box__h_style">Меня зовут Александр!</h2>
+            <h2 class="about-box__h about-box__h_style">Меня&nbsp;зовут Александр!</h2>
             <p class="about-box__p about-box__p_style">И я хочу обучиться программированию, потому что мне это интересно!
             </p>
             <p class="about-box__p about-box__p_style">А еще я люблю музыку и кушать пельмени.</p>
         </div>
 
-        <div class="about_img"><img src="img/about_img.jpg" alt=""></div>
+        <div class="about__img-box">
+            <img class="about__img" src="img/about_img.jpg" alt="">
+        </div>
 
     </section>
 
@@ -131,12 +133,12 @@
     </section>
 
     <!-- Калькулятор -->
-    <form id="calc-mp" action="" class="calc container">
+    <form id="calc-mp" action="#" class="calc container">
 
         <h2 class="calc__h calc__h_style">Калькулятор</h2>
-        <p class="calc_input">
-            <label for="calc_x" class="calc__label calc__label_style">Введите первое число:</label><br>
-            <input type="number" name="calc_x" class="input-mp input-mp__calc">
+        <p class="calc__input">
+            <label for="calcX" class="calc__label calc__label_style">Введите первое число:</label><br>
+            <input type="number" id="calcX" name="calcX" class="input-mp input-mp__calc">
         </p>
         <p class="calc__input">
             <label for="calc_action" class="calc__label calc__label_style">Выберите операцию:</label><br>
@@ -151,50 +153,50 @@
 
         </p>
         <p class="calc__input">
-            <label for="calc_y" class="calc__label calc__label_style">Введите второе число:</label><br>
-            <input type="number" name="calc_y" class="input-mp input-mp__calc">
+            <label for="calcY"  class="calc__label calc__label_style">Введите второе число:</label><br>
+            <input type="number" id="calcY" name="calc_y" class="input-mp input-mp__calc">
         </p>
 
         <button class="button button__calc button__calc_style">Вычислить</button>
     </form>
 
     <!-- Сложности -->
-    <section id="problems-mp" class="problems">
+    <section id="problems-mp" class="activity">
 
-        <div class="problems__block container">
+        <div class="activity__block container">
 
-            <h2 class="problems__h problems__h_style">Сложности</h2>
-            <div class="problems__box">
+            <h2 class="activity__h activity__h_style">Сложности</h2>
+            <div class="activity__box">
 
-                <div class="problems-item">
-                    <h3 class="problems-item__h problems-item__h_style">?</h3>
-                    <p class="problems-item__p problems-item__p_style">Не получилось задать контур тексту в имени, как в
+                <div class="activity-item">
+                    <h3 class="problems-item__h activity-item__h_style">?</h3>
+                    <p class="problems-item__p activity-item__p_style">Не получилось задать контур тексту в имени, как в
                         макете</p>
                 </div>
-                <div class="problems-item problems-item_align">
-                    <h3 class="problems-item__h problems-item__h_style">?</h3>
-                    <p class="problems-item__p problems-item__p_style">В секции "Калькулятор" нет поля для вывода
+                <div class="activity-item activity-item_align">
+                    <h3 class="problems-item__h activity-item__h_style">?</h3>
+                    <p class="problems-item__p activity-item__p_style">В секции "Калькулятор" нет поля для вывода
                         результата
                     </p>
                 </div>
 
-                <div class="problems-item">
-                    <h3 class="problems-item__h problems-item__h_style">?</h3>
-                    <p class="problems-item__p problems-item__p_style">Не разобрался с заменой стрелочки в теге
+                <div class="activity-item">
+                    <h3 class="problems-item__h activity-item__h_style">?</h3>
+                    <p class="problems-item__p activity-item__p_style">Не разобрался с заменой стрелочки в теге
                         "select",
                         скачет при масштабировании</p>
                 </div>
 
-                <div class="problems-item problems-item_align">
-                    <h3 class="problems-item__h problems-item__h_style">?</h3>
-                    <p class="problems-item__p problems-item__p_style">Хочется сделать реверс цветов кнопки "Вычислить"
+                <div class="activity-item activity-item_align">
+                    <h3 class="problems-item__h activity-item__h_style">?</h3>
+                    <p class="problems-item__p activity-item__p_style">Хочется сделать реверс цветов кнопки "Вычислить"
                         при
                         наведении</p>
                 </div>
 
-                <div class="problems-item">
-                    <h3 class="problems-item__h problems-item__h_style">?</h3>
-                    <p class="problems-item__p problems-item__p_style">Местами некорректно заданы марджины и паддинги,
+                <div class="activity-item">
+                    <h3 class="problems-item__h activity-item__h_style">?</h3>
+                    <p class="problems-item__p activity-item__p_style">Местами некорректно заданы margin и padding,
                         пришлось придумывать</p>
                 </div>
 
@@ -206,14 +208,14 @@
     <!-- Настроение -->
     <section class="mood container">
         <h2 id="mood-mp" class="mood_h">Настроение</h2>
-        <div class="mood_box"><img class="mood_img" src="img/mood_2_img.jpg" alt="#"></div>
+        <div class="mood_box"><img class="mood__img" src="img/mood_2_img.jpg" alt="#"></div>
     </section>
 
     <!-- Подвал -->
     <footer class="footer">
         <div class="footer-box container">
             <a href="index.html" class="link-mp">
-                <p href="index.html" class="footer__h footer__h_style">Александр Григорьев</p>
+                <p class="footer__h footer__h_style">Александр Григорьев</p>
             </a>
             <nav id="cont-mp" class="footer__nav footer__nav_style footer__nav">
                 <a href="https://vk.com/sasharonan" class="link-mp link-mp__li_style">
