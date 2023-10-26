@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
-    <!--    <link rel="stylesheet" href="style/my-page_style.css">-->
+    <!--        <link rel="stylesheet" href="style/my-page_style.css">-->
 
     <link href="style/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,12 +14,84 @@
           rel="stylesheet">
 
     <link rel="shortcut icon" href="img/hand.png">
-    <!--        <script src="https://cdn.tailwindcss.com"></script>-->
+    <!--            <script src="https://cdn.tailwindcss.com"></script>-->
+
+    <style>
+        .mask {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(156, 163, 175, 0.8);
+            z-index: 2;
+
+        }
+
+        .mask__result {
+
+            width: fit-content;
+            margin: auto;
+            margin-top: 20%;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: rgba(0, 76, 147, 1);
+            background: linear-gradient(90deg, #010114, #342ebc, #010114);
+            z-index: 3;
+        }
+
+        .mask__result > h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            padding-bottom: 15px;
+        }
+
+        .mask__finish {
+            text-align: right;
+            margin-top: 25px;
+        }
+
+        .mask__finish > button {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            padding: 10px 30px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+        }
+
+        .mask__finish > button:hover {
+            box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+            color: #06071d;
+            background: linear-gradient(265deg, #1a1f8d,#5a60e0,#d4d6fa);
+        }
+
+
+    </style>
 
     <title>Моя страница</title>
+
+
 </head>
 
 <body>
+
+<div class="mask" id="mask" >
+    <div class="mask__result" >
+        <h3 class="mask__h" id="result" >Результат:</h3>
+        <hr>
+
+        <div class="mask__finish">
+            <button onclick="closeModule ()" type="button" class="">Закрыть</button>
+        </div>
+
+    </div>
+</div>
 
 <header class="min-h-[100px] bg-blue flex items-start pt-[31px] fixed w-full top-0">
     <div class="flex items-start justify-between w-full my-0 mx-auto px-5 contMob mobile:w-[1150px] mobile:items-center mobile:mt-0">
@@ -27,7 +99,8 @@
         <p class="block font-inter text-2xl text-white">Александр Григорьев</p>
 
         <details class="text-white font-inter font-base font-normal w-max block mobile:hidden">
-            <summary class="flex justify-end list-none after:content[''] after:inline-block after:bg-burger after:h-9 after:w-9 after:bg-[length:38px_38px]">
+            <summary
+                    class="flex justify-end list-none after:content[''] after:inline-block after:bg-burger after:h-9 after:w-9 after:bg-[length:38px_38px]">
 
             </summary>
             <nav class="flex flex-col justify-between items-end h-[278px] mt-16 mb-6">
@@ -145,11 +218,13 @@
 
     <h2 class="text-blue font-bold text-4xl font-inter inline-block w-full">Калькулятор</h2>
     <div class="flex flex-col w-full">
+
         <p class="mt-7 inline-block w-full">
             <label for="calcX" class="text-sm font-normal  font-roboto">Введите первое число:</label><br>
             <input type="number" id="calcX" name="calcX"
                    class="w-full mobile:w-[550px] border border-solid border-black outline-0 pl-1.5 font-roboto">
         </p>
+
         <p class="mt-7 inline-block w-full">
             <label for="calc_action" class="text-sm font-normal font-roboto">Выберите операцию:</label><br>
             <select name="calc_action" id="calc_action"
@@ -168,9 +243,12 @@
             <input type="number" id="calcY" name="calc_y"
                    class="w-full mobile:w-[550px] border border-solid border-black outline-0 pl-1.5 font-roboto">
         </p>
+
+
     </div>
 
-    <button class="bg-blue mt-10 py-3 px-11 rounded-[5px] border-none font-inter text-white hover:bg-white hover:border hover:border-solid hover:border-blue hover:text-blue hover:py-2.75 hover:px-10.75">
+    <button type="button" onclick="calculate()"
+            class="bg-blue mt-10 py-3 px-11 rounded-[5px] border-none font-inter text-white hover:bg-white hover:border hover:border-solid hover:border-blue hover:text-blue hover:py-2.75 hover:px-10.75">
         Вычислить
     </button>
 </form>
@@ -244,6 +322,8 @@
         </nav>
     </div>
 </footer>
+
+<script src="js/calc.js"></script>
 
 </body>
 
