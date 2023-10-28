@@ -3,144 +3,232 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/my-page_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <!--        <link rel="stylesheet" href="style/my-page_style.css">-->
+
+    <link href="style/output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Roboto:wght@400;900&display=swap"
-        rel="stylesheet">
+          rel="stylesheet">
 
     <link rel="shortcut icon" href="img/hand.png">
+    <!--            <script src="https://cdn.tailwindcss.com"></script>-->
+
+    <style>
+        .mask {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(156, 163, 175, 0.8);
+            z-index: 2;
+
+        }
+
+        .mask__result {
+
+            width: fit-content;
+            margin: auto;
+            margin-top: 20%;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: rgba(0, 76, 147, 1);
+            background: linear-gradient(90deg, #010114, #342ebc, #010114);
+            z-index: 3;
+        }
+
+        .mask__result > h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            padding-bottom: 15px;
+        }
+
+        .mask__finish {
+            text-align: right;
+            margin-top: 25px;
+        }
+
+        .mask__finish > button {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            padding: 10px 30px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+        }
+
+        .mask__finish > button:hover {
+            box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+            color: #06071d;
+            background: linear-gradient(265deg, #1a1f8d,#5a60e0,#d4d6fa);
+        }
+
+
+    </style>
 
     <title>Моя страница</title>
+
+
 </head>
 
 <body>
 
-    <!-- Шапка -->
-    <header class="header">
-        <div class="header-box container">
-            <a href="index.html" class="link-mp">
-                <p href="index.html" class="header__h header__h_style">Александр Григорьев</p>
-            </a>
+<div class="mask" id="mask" >
+    <div class="mask__result" >
+        <h3 class="mask__h" id="result" >Результат:</h3>
+        <hr>
 
-            <details class="header__burger">
-                <summary class="header__burger-sum">
-                </summary>
-                <nav class="header__nav_style header__burger-details">
-                    <a href="#about-mp" class="link-mp link-mp__li_style">
-                        Обо мне
-                    </a>
-                    <a href="#activity-mp" class="link-mp link-mp__li_style">
-                        Моя деятельность
-                    </a>
-                    <a href="#calc-mp" class="link-mp link-mp__li_style">
-                        Калькулятор
-                    </a>
-                    <a href="#problems-mp" class="link-mp link-mp__li_style">
-                        Сложности
-                    </a>
-                    <a href="#mood-mp" class="link-mp link-mp__li_style">
-                        Настроение
-                    </a>
-                    <a href="#cont-mp" class="link-mp link-mp__li_style">
-                        Контакты
-                    </a>
-                </nav>
-            </details>
+        <div class="mask__finish">
+            <button onclick="closeModule ()" type="button" class="">Закрыть</button>
+        </div>
 
-            <nav class="header__nav header__nav_style">
-                <a href="#about-mp" class="link-mp link-mp__li_style">
-                    Обо мне
+    </div>
+</div>
+
+<header class="min-h-[100px] bg-blue flex items-start pt-[31px] fixed w-full top-0">
+    <div class="flex items-start justify-between w-full my-0 mx-auto px-5 contMob mobile:w-[1150px] mobile:items-center mobile:mt-0">
+
+        <p class="block font-inter text-2xl text-white">Александр Григорьев</p>
+
+        <details class="text-white font-inter font-base font-normal w-max block mobile:hidden">
+            <summary
+                    class="flex justify-end list-none after:content[''] after:inline-block after:bg-burger after:h-9 after:w-9 after:bg-[length:38px_38px]">
+
+            </summary>
+            <nav class="flex flex-col justify-between items-end h-[278px] mt-16 mb-6">
+                <a href="#about-mp" class="hover:decoration-1">
+                    Обо&nbsp;мне
                 </a>
-                <a href="#activity-mp" class="link-mp link-mp__li_style">
-                    Моя деятельность
+                <a href="#activity-mp" class="hover:decoration-1">
+                    Моя&nbsp;деятельность
                 </a>
-                <a href="#calc-mp" class="link-mp link-mp__li_style">
+                <a href="#calc-mp" class="hover:decoration-1">
                     Калькулятор
                 </a>
-                <a href="#problems-mp" class="link-mp link-mp__li_style">
+                <a href="#problems-mp" class="hover:decoration-1">
                     Сложности
                 </a>
-                <a href="#mood-mp" class="link-mp link-mp__li_style">
+                <a href="#mood-mp" class="hover:decoration-1">
                     Настроение
                 </a>
-                <a href="#cont-mp" class="link-mp link-mp__li_style">
+                <a href="#cont-mp" class="hover:decoration-1">
                     Контакты
                 </a>
             </nav>
-        </div>
-    </header>
 
-    <!-- Обо мне -->
-    <section id="about-mp" class="about container">
+        </details>
 
-        <div class="about-box">
-            <h2 class="about-box__h about-box__h_style">Меня зовут Александр!</h2>
-            <p class="about-box__p about-box__p_style">И я хочу обучиться программированию, потому что мне это интересно!
-            </p>
-            <p class="about-box__p about-box__p_style">А еще я люблю музыку и кушать пельмени.</p>
-        </div>
+        <nav class="hidden mobile:flex mobile:w-[63%] mobile:min-w-min mobile:justify-between mobile:flex-wrap mobile:font-inter mobile:font-base mobile:font-normal mobile:text-white">
+            <a href="#about-mp" class="hover:decoration-1">
+                Обо&nbsp;мне
+            </a>
+            <a href="#activity-mp" class="hover:decoration-1">
+                Моя&nbsp;деятельность
+            </a>
+            <a href="#calc-mp" class="hover:decoration-1">
+                Калькулятор
+            </a>
+            <a href="#problems-mp" class="hover:decoration-1">
+                Сложности
+            </a>
+            <a href="#mood-mp" class="hover:decoration-1">
+                Настроение
+            </a>
+            <a href="#cont-mp" class="hover:decoration-1">
+                Контакты
+            </a>
+        </nav>
+    </div>
+</header>
 
-        <div class="about_img"><img src="img/about_img.jpg" alt=""></div>
+<section id="about-mp"
+         class="flex flex-col justify-between max-w-full contMob mobile:w-[1150px] mx-auto px-5 mt-[150px] mobile:flex-row">
 
-    </section>
+    <div class="flex flex-col max-w-full mobile:pt-12 font-inter text-4xl font-bold align-left text-blue pr-2.5">
+        <h2 class="font-inter">Меня&nbsp;зовут Александр!</h2>
+        <p class="text-2xl italic font-bold align-left text-blue mt-11">И я хочу обучиться программированию, потому что
+            мне это интересно!
+        </p>
+        <p class="text-2xl italic font-bold align-left text-blue mt-11">А еще я люблю музыку и кушать пельмени.</p>
+    </div>
 
-    <!-- Деятельность -->
-    <section id="activity-mp" class="activity">
+    <div>
+        <img class="mt-12 mobile:mt-0" src="img/about_img.jpg" alt="">
+    </div>
 
-        <div class="activity__block container">
+</section>
 
-            <h2 class="activity__h activity__h_style">Моя деятельность</h2>
+<!-- Деятельность -->
+<section id="activity-mp" class="bg-light-blue mt-14">
 
-            <div class="activity__box">
+    <div class="max-w-[1150px]Mob mobile:w-[1150px] mx-auto px-5 flex flex-col">
 
-                <div class="activity-item">
-                    <h3 class="activity-item__h activity-item__h_style">1</h3>
-                    <p class="activity-item__p activity-item__p_style">Работаю в сфере разработки и производства
-                        различной
-                        продукции</p>
-                </div>
+        <p class="py-7 block font-inter text-4xl font-bold text-blue">Моя деятельность</p>
 
-                <div class="activity-item activity-item_align">
-                    <h3 class="activity-item__h activity-item__h_style">2</h3>
-                    <p class="activity-item__p activity-item__p_style">Учу английский</p>
-                </div>
+        <div class="flex flex-col justify-between flex-grow mb-9 mobile:min-h-[448px] w-full min-h-min mobile:flex-row">
 
-                <div class="activity-item">
-                    <h3 class="activity-item__h activity-item__h_style">3</h3>
-                    <p class="activity-item__p activity-item__p_style">Прохожу курс по разработке программного
-                        обеспечения
-                    </p>
-                </div>
-
-                <div class="activity-item activity-item_align">
-                    <h3 class="activity-item__h activity-item__h_style">4</h3>
-                    <p class="activity-item__p activity-item__p_style">Учусь собирать кубик Рубика</p>
-                </div>
-
-                <div class="activity-item">
-                    <h3 class="activity-item__h activity-item__h_style">5</h3>
-                    <p class="activity-item__p activity-item__p_style">Играю в волейбол</p>
-                </div>
-
+            <div class="max-w-full overflow-auto h-48 mt-5 border border-solid border-blue rounded-[4px] flex flex-row mobile:flex-col mobile:h-[290px] mobile:mr-6 mobile:w-[100%]">
+                <h3 class="mr-6 -mb-5 ml-9 mobile:ml-3 mobile:-mt-4 text-blue text-[120px] font-bold font-roboto">1</h3>
+                <p class="mr-6 mb-4 ml-3 mt-10 mobile:mt-0 text-blue font-base font-normal text-left font-roboto">
+                    Работаю в сфере разработки и
+                    производства различной продукции</p>
             </div>
 
+            <div class="max-w-full overflow-auto h-48 mt-5 border border-solid border-blue rounded-[4px] flex flex-row mobile:flex-col mobile:h-[290px] mobile:mr-6 mobile:w-[100%] mobile:self-end">
+                <h3 class="mr-6 -mb-5 ml-9 mobile:ml-3 mobile:-mt-4 text-blue text-[120px] font-bold font-roboto">2</h3>
+                <p class="mr-6 mb-4 ml-3 mt-10 mobile:mt-0 text-blue font-base font-normal text-left font-roboto">Учу
+                    английский</p>
+            </div>
+
+            <div class="max-w-full overflow-auto h-48 mt-5 border border-solid border-blue rounded-[4px] flex flex-row mobile:flex-col mobile:h-[290px] mobile:mr-6 mobile:w-[100%]">
+                <h3 class="mr-6 -mb-5 ml-9 mobile:ml-3 mobile:-mt-4 text-blue text-[120px] font-bold font-roboto">3</h3>
+                <p class="mr-6 mb-4 ml-3 mt-10 mobile:mt-0 text-blue font-base font-normal text-left font-roboto">
+                    Прохожу курс по разработке
+                    программного обеспечения</p>
+            </div>
+
+            <div class="max-w-full overflow-auto h-48 mt-5 border border-solid border-blue rounded-[4px] flex flex-row mobile:flex-col mobile:h-[290px] mobile:mr-6 mobile:w-[100%] mobile:self-end">
+                <h3 class="mr-6 -mb-5 ml-9 mobile:ml-3 mobile:-mt-4 text-blue text-[120px] font-bold font-roboto">4</h3>
+                <p class="mr-6 mb-4 ml-3 mt-10 mobile:mt-0 text-blue font-base font-normal text-left font-roboto">Учусь
+                    собирать кубик Рубика</p>
+            </div>
+
+            <div class="max-w-full overflow-auto h-48 mt-5 border border-solid border-blue rounded-[4px] flex flex-row mobile:flex-col mobile:h-[290px] mobile:w-[100%]">
+                <h3 class="mr-6 -mb-5 ml-9 mobile:ml-3 mobile:-mt-4 text-blue text-[120px] font-bold font-roboto">5</h3>
+                <p class="mr-6 mb-4 ml-3 mt-10 mobile:mt-0 text-blue font-base font-normal text-left font-roboto">Играю
+                    в волейбол</p>
+            </div>
+
+
         </div>
-    </section>
 
-    <!-- Калькулятор -->
-    <form id="calc-mp" action="" class="calc container">
+    </div>
+</section>
 
-        <h2 class="calc__h calc__h_style">Калькулятор</h2>
-        <p class="calc_input">
-            <label for="calc_x" class="calc__label calc__label_style">Введите первое число:</label><br>
-            <input type="number" name="calc_x" class="input-mp input-mp__calc">
+<!-- Калькулятор -->
+<form id="calc-mp" action="#" class="mt-6 max-w-[1150px]Mob mobile:w-[1150px] mx-auto px-5">
+
+    <h2 class="text-blue font-bold text-4xl font-inter inline-block w-full">Калькулятор</h2>
+    <div class="flex flex-col w-full">
+
+        <p class="mt-7 inline-block w-full">
+            <label for="calcX" class="text-sm font-normal  font-roboto">Введите первое число:</label><br>
+            <input type="number" id="calcX" name="calcX"
+                   class="w-full mobile:w-[550px] border border-solid border-black outline-0 pl-1.5 font-roboto">
         </p>
-        <p class="calc__input">
-            <label for="calc_action" class="calc__label calc__label_style">Выберите операцию:</label><br>
-            <select name="calc_action" id="calc_action" class="input-mp input-mp__calc input-mp__calc-select">
+
+        <p class="mt-7 inline-block w-full">
+            <label for="calc_action" class="text-sm font-normal font-roboto">Выберите операцию:</label><br>
+            <select name="calc_action" id="calc_action"
+                    class="w-full mobile:w-[550px] border border-solid border-black outline-0 pl-1.5 font-roboto">
 
                 <!-- Не получилось заменить стрелочку на такой же, как в макете -->
                 <option value="sum">+</option>
@@ -150,79 +238,92 @@
             </select>
 
         </p>
-        <p class="calc__input">
-            <label for="calc_y" class="calc__label calc__label_style">Введите второе число:</label><br>
-            <input type="number" name="calc_y" class="input-mp input-mp__calc">
+        <p class="mt-7 inline-block w-full">
+            <label for="calcY" class="text-sm font-normal font-roboto">Введите второе число:</label><br>
+            <input type="number" id="calcY" name="calc_y"
+                   class="w-full mobile:w-[550px] border border-solid border-black outline-0 pl-1.5 font-roboto">
         </p>
 
-        <button class="button button__calc button__calc_style">Вычислить</button>
-    </form>
 
-    <!-- Сложности -->
-    <section id="problems-mp" class="problems">
+    </div>
 
-        <div class="problems__block container">
+    <button type="button" onclick="calculate()"
+            class="bg-blue mt-10 py-3 px-11 rounded-[5px] border-none font-inter text-white hover:bg-white hover:border hover:border-solid hover:border-blue hover:text-blue hover:py-2.75 hover:px-10.75">
+        Вычислить
+    </button>
+</form>
 
-            <h2 class="problems__h problems__h_style">Сложности</h2>
-            <div class="problems__box">
+<!-- Сложности -->
+<section id="problems-mp" class="bg-light-blue mt-14">
 
-                <div class="problems-item">
-                    <h3 class="problems-item__h problems-item__h_style">?</h3>
-                    <p class="problems-item__p problems-item__p_style">Не получилось задать контур тексту в имени, как в
-                        макете</p>
-                </div>
-                <div class="problems-item problems-item_align">
-                    <h3 class="problems-item__h problems-item__h_style">?</h3>
-                    <p class="problems-item__p problems-item__p_style">В секции "Калькулятор" нет поля для вывода
-                        результата
-                    </p>
-                </div>
+    <div class="max-w-[1150px]Mob mobile:w-[1150px] mx-auto px-5 flex flex-col ">
 
-                <div class="problems-item">
-                    <h3 class="problems-item__h problems-item__h_style">?</h3>
-                    <p class="problems-item__p problems-item__p_style">Не разобрался с заменой стрелочки в теге
-                        "select",
-                        скачет при масштабировании</p>
-                </div>
+        <h2 class="py-7 block font-inter text-4xl font-bold text-blue">Сложности</h2>
+        <div class="flex flex-col justify-between flex-grow mb-9 mobile:min-h-[448px] w-full min-h-min mobile:flex-row">
 
-                <div class="problems-item problems-item_align">
-                    <h3 class="problems-item__h problems-item__h_style">?</h3>
-                    <p class="problems-item__p problems-item__p_style">Хочется сделать реверс цветов кнопки "Вычислить"
-                        при
-                        наведении</p>
-                </div>
+            <div class="max-w-full overflow-auto h-48 mt-5 border border-solid border-blue rounded-[4px] flex flex-row mobile:flex-col mobile:h-[290px] mobile:mr-6 mobile:w-[100%]">
+                <h3 class="mr-6 -mb-5 ml-9 mobile:ml-3 mobile:-mt-4 text-blue text-[120px] font-bold font-roboto">?</h3>
+                <p class="mr-6 mb-4 ml-3 mt-10 mobile:mt-0 text-blue font-base font-normal text-left font-roboto">Не
+                    получилось задать контур тексту в имени, как в
+                    макете</p>
+            </div>
+            <div class="max-w-full overflow-auto h-48 mt-5 border border-solid border-blue rounded-[4px] flex flex-row mobile:flex-col mobile:h-[290px] mobile:mr-6 mobile:w-[100%] mobile:self-end">
+                <h3 class="mr-6 -mb-5 ml-9 mobile:ml-3 mobile:-mt-4 text-blue text-[120px] font-bold font-roboto">?</h3>
+                <p class="mr-6 mb-4 ml-3 mt-10 mobile:mt-0 text-blue font-base font-normal text-left font-roboto">В
+                    секции "Калькулятор" нет поля для вывода
+                    результата
+                </p>
+            </div>
 
-                <div class="problems-item">
-                    <h3 class="problems-item__h problems-item__h_style">?</h3>
-                    <p class="problems-item__p problems-item__p_style">Местами некорректно заданы марджины и паддинги,
-                        пришлось придумывать</p>
-                </div>
+            <div class="max-w-full overflow-auto h-48 mt-5 border border-solid border-blue rounded-[4px] flex flex-row mobile:flex-col mobile:h-[290px] mobile:mr-6 mobile:w-[100%]">
+                <h3 class="mr-6 -mb-5 ml-9 mobile:ml-3 mobile:-mt-4 text-blue text-[120px] font-bold font-roboto">?</h3>
+                <p class="mr-6 mb-4 ml-3 mt-10 mobile:mt-0 text-blue font-base font-normal text-left font-roboto">Не
+                    разобрался с заменой стрелочки в теге
+                    "select",
+                    скачет при масштабировании</p>
+            </div>
 
+            <div class="max-w-full overflow-auto h-48 mt-5 border border-solid border-blue rounded-[4px] flex flex-row mobile:flex-col mobile:h-[290px] mobile:mr-6 mobile:w-[100%] mobile:self-end">
+                <h3 class="mr-6 -mb-5 ml-9 mobile:ml-3 mobile:-mt-4 text-blue text-[120px] font-bold font-roboto">?</h3>
+                <p class="mr-6 mb-4 ml-3 mt-10 mobile:mt-0 text-blue font-base font-normal text-left font-roboto">
+                    Хочется сделать реверс цветов кнопки "Вычислить"
+                    при
+                    наведении</p>
+            </div>
+
+            <div class="max-w-full overflow-auto h-48 mt-5 border border-solid border-blue rounded-[4px] flex flex-row mobile:flex-col mobile:h-[290px] mobile:w-[100%]">
+                <h3 class="mr-6 -mb-5 ml-9 mobile:ml-3 mobile:-mt-4 text-blue text-[120px] font-bold font-roboto">?</h3>
+                <p class="mr-6 mb-4 ml-3 mt-10 mobile:mt-0 text-blue font-base font-normal text-left font-roboto ">
+                    Местами некорректно заданы margin и padding,
+                    пришлось придумывать</p>
             </div>
 
         </div>
-    </section>
 
-    <!-- Настроение -->
-    <section class="mood container">
-        <h2 id="mood-mp" class="mood_h">Настроение</h2>
-        <div class="mood_box"><img class="mood_img" src="img/mood_2_img.jpg" alt="#"></div>
-    </section>
+    </div>
+</section>
 
-    <!-- Подвал -->
-    <footer class="footer">
-        <div class="footer-box container">
-            <a href="index.html" class="link-mp">
-                <p href="index.html" class="footer__h footer__h_style">Александр Григорьев</p>
+<!-- Настроение -->
+<section class="mt-14 max-w-contMob mobile:w-[1150px] mx-auto px-5">
+    <h2 id="mood-mp" class="text-blue font-bold text-4xl font-inter">Настроение</h2>
+    <div class="flex justify-center mt-2.5 w-full"><img class="mood__img" src="img/mood_2_img.jpg" alt="#"></div>
+</section>
+
+<!-- Подвал -->
+<footer class="h-24 min-h-max bg-blue flex items-center mt-14">
+    <div class="flex w-full items-start justify-between w-contMob mobile:w-[1150px] mx-auto px-5">
+        <a href="index.html" class="decoration-0">
+            <p class="blok justify-start font-inter text-white text-2xl text-left">Александр Григорьев</p>
+        </a>
+        <nav id="cont-mp" class="flex list-none justify-end self-center font-inter font-normal">
+            <a href="https://vk.com/sasharonan" class="decoration-0">
+                <img src="img/vk.svg" alt="#">
             </a>
-            <nav id="cont-mp" class="footer__nav footer__nav_style footer__nav">
-                <a href="https://vk.com/sasharonan" class="link-mp link-mp__li_style">
-                    <img src="img/vk.svg" alt="#">
-                </a>
-            </nav>
-        </div>
-    </footer>
+        </nav>
+    </div>
+</footer>
 
+<script src="js/calc.js"></script>
 
 </body>
 
